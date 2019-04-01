@@ -13,14 +13,14 @@ require 'inc/palindromer.php';
 // Because we all need a little help sometimes.
 function usage() {
 	echo 'USAGE:\tphp -f find-palindromes.php [input_file] [output_file]'.PHP_EOL;
-	echo "\t input_file Optional. Defaults to 'possible_palindromes.txt'".PHP_EOL;
+	echo "\t input_file Optional. Defaults to 'possible-palindromes.txt'".PHP_EOL;
 	echo "\t output_file Optional. Defaults to 'palindromes.json'".PHP_EOL;
 	echo "\t\t***Relative Paths only please!".PHP_EOL;
 	die();
 }
 
 // Open the input file.
-$input_file = !empty($argv[1]) ? $argv[1] : 'possible_palindromes.txt';
+$input_file = !empty($argv[1]) ? $argv[1] : 'possible-palindromes.txt';
 if(!is_file($input_file)) {
 	echo 'ERROR: Could not open input file '.$input_file.PHP_EOL;
 	usage();
